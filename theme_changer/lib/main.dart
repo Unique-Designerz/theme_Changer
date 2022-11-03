@@ -33,7 +33,9 @@ class _MyAppState extends State<MyApp> {
           actions: <Widget>[
             const IconButton(
               onPressed: null,
-              icon: Icon(Icons.equalizer),
+              icon: Icon(
+                Icons.equalizer,
+              ),
             ),
             IconButton(
               onPressed: () {
@@ -114,8 +116,8 @@ class _MyAppState extends State<MyApp> {
 ThemeData _lightTheme = ThemeData(
   primarySwatch: Colors.amber,
   brightness: Brightness.light,
-  navigationBarTheme: NavigationBarThemeData(backgroundColor: Colors.red),
   appBarTheme: const AppBarTheme(
+    iconTheme: IconThemeData(color: Colors.red),
     backgroundColor: Colors.transparent,
     shadowColor: Colors.transparent,
   ),

@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 class NavigationBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
+        // ignore: prefer_const_literals_to_create_immutables
+        items: [
+          const BottomNavigationBarItem(
               label: 'home',
               icon: Icon(Icons.home),
               backgroundColor: Color.fromRGBO(240, 240, 240, 0.3)),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               label: 'home',
               icon: Icon(Icons.search),
               backgroundColor: Colors.yellow),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'home',
             icon: Icon(Icons.person),
-            backgroundColor: Colors.blue,
           ),
         ],
         type: BottomNavigationBarType.shifting,
