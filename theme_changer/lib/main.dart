@@ -31,8 +31,10 @@ class _MyAppState extends State<MyApp> {
           leading: IconButton(
               onPressed: null, icon: const Icon(Icons.keyboard_arrow_left)),
           actions: <Widget>[
-            const IconButton(
-              onPressed: null,
+            IconButton(
+              onPressed: () {
+                setState(() {});
+              },
               icon: Icon(
                 Icons.equalizer,
               ),
@@ -45,14 +47,17 @@ class _MyAppState extends State<MyApp> {
               },
               icon: Icon(_iconBool ? _iconDark : _iconLight),
             ),
-            const IconButton(
-              onPressed: null,
+            IconButton(
+              onPressed: () {
+                setState(() {});
+              },
               icon: Icon(
                 Icons.notifications_outlined,
               ),
             ),
           ],
         ),
+        bottomNavigationBar: NavigationBarWidget(),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -106,7 +111,6 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
         ),
-        bottomNavigationBar: NavigationBarWidget(),
       ),
     );
   }
@@ -117,7 +121,7 @@ ThemeData _lightTheme = ThemeData(
   primarySwatch: Colors.amber,
   brightness: Brightness.light,
   appBarTheme: const AppBarTheme(
-    iconTheme: IconThemeData(color: Colors.red),
+    iconTheme: IconThemeData(color: Colors.black),
     backgroundColor: Colors.transparent,
     shadowColor: Colors.transparent,
   ),
@@ -125,6 +129,9 @@ ThemeData _lightTheme = ThemeData(
     headline4: TextStyle(
         color: Colors.red, fontSize: 102, fontWeight: FontWeight.bold),
   ),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: Colors.black,
+      unselectedIconTheme: IconThemeData(color: Colors.black)),
 );
 
 //Dark Theme
@@ -133,7 +140,12 @@ ThemeData _darkTheme = ThemeData(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: Colors.black,
   appBarTheme: const AppBarTheme(
+    iconTheme: IconThemeData(color: Colors.white),
     backgroundColor: Colors.transparent,
     shadowColor: Colors.transparent,
+  ),
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    selectedItemColor: Colors.white,
+    unselectedIconTheme: IconThemeData(color: Colors.white),
   ),
 );

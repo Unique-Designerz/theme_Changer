@@ -6,19 +6,22 @@ class NavigationBarWidget extends StatelessWidget {
         // ignore: prefer_const_literals_to_create_immutables
         items: [
           const BottomNavigationBarItem(
-              label: 'home',
-              icon: Icon(Icons.home),
-              backgroundColor: Color.fromRGBO(240, 240, 240, 0.3)),
+            label: 'home',
+            icon: Icon(
+              Icons.home,
+            ),
+          ),
           const BottomNavigationBarItem(
-              label: 'home',
-              icon: Icon(Icons.search),
-              backgroundColor: Colors.yellow),
+            label: 'home',
+            icon: Icon(Icons.circle_outlined),
+          ),
           const BottomNavigationBarItem(
             label: 'home',
             icon: Icon(Icons.person),
           ),
         ],
         type: BottomNavigationBarType.shifting,
+        currentIndex: 1,
         iconSize: 25,
         showSelectedLabels: false,
       );
